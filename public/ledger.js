@@ -103,7 +103,7 @@ const showTotal = async () => {
     
                
                 <th class="amountClass">${total}</th>
-                </tr>
+                
 
                 
                 `
@@ -115,7 +115,7 @@ const showTotal = async () => {
                     
                     <th class="totalAmountDescr" >Total: £</th>
                 
-                 ` + sum
+                 ` + sum + "</tr>"
             
     } catch (error) {
         errorMsg.innerHTML = '<h3>Server: You need to enter information</h3>'

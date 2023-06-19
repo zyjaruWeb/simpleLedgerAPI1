@@ -94,12 +94,11 @@
 .totalAmountContainer {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     justify-items: center;
-    width: 75vw;
+    width: auto;
     border-collapse: collapse;
     text-align: left;
     table-layout: auto;
     margin-left: 10;
-    width: 200px;
 }
 
 
@@ -110,7 +109,7 @@
 .totalAmountDescr, tr {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin-top: 200px;
-    width: 80vw;
+    width: auto;
     margin: 5px;
     text-align: right;
     table-layout: auto;
@@ -123,7 +122,7 @@
 @media only screen and (max-width: 867px) {
     .totalAmountDescr, tr {
         margin-top: 0;
-        width: 66vw;
+        width: auto;
         text-align: center;
         table-layout: auto;
         font-size: 16pt;
@@ -133,6 +132,16 @@
         margin-right: -30px
     }
 }
+
+th.totalAmountDescr {
+    width: 250px;
+}
+
+.containterOfTotal {
+    width: 350px;
+}
+
+
 
 .table, .xButton {
     border: 0px solid;
@@ -144,7 +153,7 @@
 @media only screen and (max-width: 867px) {
     .amountClass {
         margin-top: 100px;
-        width: 250px;
+        width: auto;
         text-align: center;
         table-layout: auto;
         font-size: 18pt;
@@ -179,7 +188,7 @@ h6 {
 .amountClass {
     font-size: 16pt;
     border: none;
-    width: 150px;
+    width: auto;
 }
 
 
@@ -367,19 +376,19 @@ input {
 }
 
 .totalContainer {
-    width: 250px;
+    width: auto;
 }
 
 .underline1 {
     margin-top: 20px;
-    width: 210px;
+    width: auto;
     height: 5px;
     border: 20px;
     background-color: rgb(212, 144, 17);
 
 }
 .underline2 {
-    width: 210px;
+    width: auto;
     height: 5px;
     border: 20px;
     background-color: rgb(212, 144, 17);

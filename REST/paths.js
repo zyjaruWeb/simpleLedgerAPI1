@@ -37,7 +37,7 @@ const getAllEntries = async (req,res) =>{
               $group: {
                 _id: "$company",
                 total: {
-                  $sum: "$amount"
+                  $sum: {$round: ["$amount", 2]}
                 }
               }
             }
