@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./public/stylesheet.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+    <title>Simple Ledger</title>
+</head>
+
+<body>
+    <div class="headerClass">
+        <div class="titleClass">
+            <h1>Simple Ledger </h1>
+            <h6>- Currently Free</h6>
+        </div>
+    <!-- <div> -->
+        <a href="https://zyjaruweb.github.io/portfolio/"><button id="aboutMeButtonId">Back</button></a>
+    </div>
+    <div class="descriptionUnderlineClass"></div>
+    
+    <form class="formContainer">
+        <div>Date:</div>
+        <input class="dateInput" type="text" id="datepicker" maxlength="10" />
+        <div>From/To:</div>
+        <input class="fromToInput" type="text">
+        <div>Description:</div>
+        <input class="descriptionInput" type="text">
+        <div>Amount (£):</div>
+        <input class="amountInput" type="text">
+        <!-- <button class="submitBtn" type="submit">Submit</button> -->
+    </form>
+    <div class="mainBody">
+        <!-- </div> -->
+        <div class="buttonsContainer">
+            <button class="resetBtn" type="button">Reset</button>
+            <!-- <button class="exportBtn" type="button">Export CSV</button> -->
+            <button class="submitBtn" type="submit">Submit</button>
+        </div>
+        <div class="errorMsg">
+            <!-- <h3>Error: You need to enter amount</h3> -->
+        </div>
+        <table class="table">
+
+            <!-- <tr class="tableHead">
+                <th>ID</th>
+                <th>Date </th>
+                <th>From/To</th>
+                <th>Description</th>
+                <th>Amount (£)</th>
+            </tr>
+            <div class="tableInfoContainer">
+
+            <tr class="tableInfo">
+                <th id="idNo">gr3451g34t</th>
+                <th id="date">14/10/2023</th>
+                <th id="fromTo">Muller</th>
+                <th id="description">Milk</th>
+                <th id="amount">52</th>
+            </tr>
+            
+            </div>-->
+
+            <!-- <tr class="totalContainer">
+            <th></th>
+                <th></th>
+                <th>Total:</th>
+                <th>£ 508</th>
+            </tr>  -->
+
+
+        </table>
+        <div>
+            <div class="underline1"></div>
+            <table class="totalAmountContainer">
+
+            </table>
+            <div class="underline2"></div>
+        </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="./calendar/lightpick.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+        integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./public/ledger.js"></script>
+</body>
+
+</html>
