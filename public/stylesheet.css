@@ -34,6 +34,14 @@
     }
 }
 
+@media only screen and (max-width: 867px) {
+    .amount {
+        width: 50px;
+    }
+}
+
+
+
 .dateInput {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 14pt;
