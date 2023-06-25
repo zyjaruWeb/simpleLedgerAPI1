@@ -27,7 +27,6 @@ const EntrySchema = new mongoose.Schema({
     amount:{
         type:Number,
         required: [true,"must provide amount, a '-' means deduct form you balance (paid), '+' means you received "],
-        maxLength: 20,
     }
 })
 
