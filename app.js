@@ -6,7 +6,8 @@ const app = express()
 const routes = require("./routes/router")
 const connectDB = require("./dbConnect/connect")
 require("dotenv").config()
-
+const notFound = require("./middleware/notFound")
+const errHndlr = require("./middleware/errHndlr")
 
 
 
@@ -16,10 +17,13 @@ app.use(express.json()) //parse incoming requests and return object
 
 
 app.use("/api/v1/entries", routes)
+app.use(notFound)
+app.use(errHndlr)
 
 
 const port = "3000"  //hardcode server for localhost 3000
-const PORT = process.env.PORT || 3030 // server for deployement
+const PORT = process.env.PORT || 3000 // server for deployement
+
 
 
 //create server on localhost:3000

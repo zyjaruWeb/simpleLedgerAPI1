@@ -27,9 +27,9 @@ const showEntries = async () => {
         const {
             data: { entries },
         } = await axios.get("/api/v1/entries")
-        
+        errorMsg.innerHTML = ''
         if (entries.length < 1) {
-            errorMsg.innerHTML = '<h3>Server: You need to enter information</h3>'
+            errorMsg.innerHTML = '<h3 class="errMsg">Server: Please enter data</h3>'
             tableInfoContainer.style.visibility = 'hidden'
             return
         }
@@ -69,7 +69,7 @@ const showEntries = async () => {
             </tr>` + allEntries
 
     } catch (error) {
-        errorMsg.innerHTML = '<h3>Server: You need to enter information</h3>'
+        errorMsg.innerHTML = '<h3 class="errMsg">Server: You need to enter information</h3>'
     }
     tableInfoContainer.style.visibility = 'visible'
 
@@ -88,7 +88,7 @@ const showTotal = async () => {
         } = await axios.get("/api/v1/entries")
         
         if (amounts.length < 1) {
-            errorMsg.innerHTML = '<h3>Server: You need to enter information</h3>'
+            errorMsg.innerHTML = '<h3 class="errMsg">Server: Please enter data</h3>'
             totalAmountContainer.style.visibility = 'hidden'
             return
         }
@@ -118,7 +118,7 @@ const showTotal = async () => {
                  ` + sum + "</tr>"
             
     } catch (error) {
-        errorMsg.innerHTML = '<h3>Server: You need to enter information</h3>'
+        errorMsg.innerHTML = '<h3 class="errMsg">Server: Please enter data</h3>'
     }
     totalAmountContainer.style.visibility = 'visible'
 
@@ -150,6 +150,7 @@ submitBtn.addEventListener("click", async (e) => {
 
     } catch (error) {
         console.log("error")
+        errorMsg.innerHTML = `<h3 class="errMsg">Server: Please enter correct data: ${error}</h3>`
     }
 })
 

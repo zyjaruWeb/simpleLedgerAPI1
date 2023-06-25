@@ -9,6 +9,10 @@
     padding: 0;
 }
 
+.errMsg {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 250px;
+}
 
 
 .formContainer {

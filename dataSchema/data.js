@@ -5,13 +5,13 @@ const mongoose = require("mongoose")
 
 const EntrySchema = new mongoose.Schema({
     date1:{type: Date ,
-    required: [true,"must provide date dd/mm/yyyy"],
+    required: [true,"must provide date mm/dd/yyyy"],
     
     },
     
     date: {
         type:String,
-        required: [true,"must provide date dd/mm/yyyy"], 
+        required: [true,"must provide date mm/dd/yyyy"], 
         maxLength: 10,
     },
     from: {
@@ -26,9 +26,8 @@ const EntrySchema = new mongoose.Schema({
     },
     amount:{
         type:Number,
-        min: 0,
         required: [true,"must provide amount, a '-' means deduct form you balance (paid), '+' means you received "],
-        maxLsength: 20,
+        maxLength: 20,
     }
 })
 
