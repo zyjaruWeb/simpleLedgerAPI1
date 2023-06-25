@@ -203,6 +203,10 @@ h6 {
     width: auto;
 }
 
+.aLink {
+    text-decoration: none;
+    color: white;
+}
 
 
 #aboutMeButtonId {
