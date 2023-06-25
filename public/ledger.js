@@ -150,7 +150,7 @@ submitBtn.addEventListener("click", async (e) => {
 
     } catch (error) {
         console.log("error")
-        errorMsg.innerHTML = `<h3 class="errMsg">Server: Please enter correct data: ${error}</h3>`
+        errorMsg.innerHTML = `<h3 class="errMsg">Server: Please enter correct data</h3>`
     }
 })
 
