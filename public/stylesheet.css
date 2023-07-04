@@ -296,8 +296,10 @@ input {
 
 @media only screen and (max-width: 867px) {
     .buttonsContainer {
-        width: 350px;
-
+        width: 300px;
+        font-size: 10px;
+        padding: 7px;
+        column-gap: 10px;
     }
 }
 
@@ -337,6 +339,7 @@ input {
         width: 25px;
         text-align: center;
         margin-right: 0px;
+        position: static;
     }
 }
 
