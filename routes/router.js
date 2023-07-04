@@ -8,10 +8,12 @@ const {
     getAllEntries,
     createEntry,
     deleteEntry,
-    deleteAllEntries
+    deleteAllEntries,
+    getCsv
 } = require("../REST/paths")
 
 router.route("/").get(getAllEntries).post(createEntry).delete(deleteAllEntries) //all type routes
 router.route("/:id").delete(deleteEntry) //specific by id type routes
+router.route("/getCsv").get(getCsv)
 
 module.exports = router

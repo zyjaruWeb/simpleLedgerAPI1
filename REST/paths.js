@@ -3,11 +3,32 @@
 
 const Data = require("../dataSchema/data.js")
 const asyncWrppr = require("../middleware/asyncWrppr")
+// const json2csv = require("json2csv");
+const { Parser } = require("json2csv")
 
+// https://www.google.com/search?q=transform+json+to+csv+nodejs&rlz=1C1YTUH_en-GBGB1012GB1012&sxsrf=AB5stBgvnz_1oBV32Wr0hyEAjgdf874veA%3A1688423833797&ei=mU2jZOCdMK6jhbIP04-R0AM&ved=0ahUKEwigzt_2zPP_AhWuUUEAHdNHBDoQ4dUDCA8&uact=5&oq=transform+json+to+csv+nodejs&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIGCAAQFhAeMgYIABAWEB4yBggAEBYQHjIGCAAQFhAeMgYIABAWEB4yBggAEBYQHjIICAAQigUQhgMyCAgAEIoFEIYDMggIABCKBRCGAzoKCAAQRxDWBBCwAzoKCAAQigUQsAMQQzoFCAAQgARKBAhBGABQoQRYrwpgrwtoAXABeACAAXKIAcEFkgEDMy40mAEAoAEBwAEByAEJ&sclient=gws-wiz-serp
 
-//get sum of amount from entries
+//get data for CSV download
 
+const getCsv =  asyncWrppr(async (req,res) =>{
+  //below sort by date old to new
 
+    const entries = await Data.find({}).sort({ date1 : 1})
+    let fields = ["_id", "date", "from", "description", "amount"]    
+        
+    const parser = new Parser({
+      fields, 
+      unwind: ["_id", "date1", "date", "from", "description", "amount", "__v"]
+    })
+          const csv = parser.parse(entries)
+
+          res.setHeader('Content-disposition', 'attachment; filename=simpleLedgerAPI.csv');
+          res.set('Content-Type', 'text/csv');
+          res.status(200).send(csv)
+          
+  })
+
+  
 
 //get all entries
 
@@ -76,5 +97,6 @@ module.exports = {
     createEntry,
     getAllEntries,
     deleteEntry,
-    deleteAllEntries
+    deleteAllEntries,
+    getCsv
 }
