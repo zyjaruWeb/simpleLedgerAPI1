@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./stylesheet.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+    <title>Simple Ledger</title>
+</head>
+
+<body>
+    <div class="headerClass">
+        <div class="titleClass">
+            <h1>Simple Ledger </h1>
+            <h6>- Currently Free</h6>
+        </div>
+    <!-- <div> -->
+        <div>
+        <form action="https://zyjaruweb.github.io/portfolio/index.html">
+            <button  type="submit" id="aboutMeButtonId">Back</button></form>
+        </div>
+    </div>
+    <div class="descriptionUnderlineClass"></div>
+    
+    <form class="formContainer">
+        <div>Username:</div>
+        <input class="dateInput" type="text" id="datepicker" maxlength="10" />
+        <div>Password:</div>
+        <input class="fromToInput" type="text">
+    </form>
+    <div class="mainBody">
+        <!-- </div> -->
+        <div class="buttonsContainer">
+            <button class="forgottenPassBtn" type="button">Forgotten Password?</button>
+            <button class="createAccountBtn" type="button" onclick="location.href=``">Create Account</button>
+            <button class="loginBtn" type="submit">Login</button>
+        </div>
+        <div class="errorMsg">
+            <!-- <h3>Error: You need to enter amount</h3> -->
+        </div>
+        <table class="table">
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="./calendar/lightpick.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+        integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./ledger.js"></script>
+</body>
+
+</html>
