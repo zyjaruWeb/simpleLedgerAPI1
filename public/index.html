@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -41,7 +42,13 @@
         <div class="buttonsContainer">
             <button class="resetBtn" type="button">Reset</button>
             <button class="exportBtn" type="button" onclick="location.href=`https://simpleledgerapi.onrender.com/api/v1/entries/getCsv/`">Export CSV</button>
-            <button class="submitBtn" type="submit">Submit</button>
+            <button class="submitBtn" type="submit">Submit</button>            
+            <button class="insightBtn" type="button" id="powerBIbtn">Insights</button>
+            <script>
+                document.getElementById("powerBIbtn").addEventListener("click", function() {
+                    window.location.href = "https://app.powerbi.com/reportEmbed?reportId=9e937f07-5654-435e-a48a-47d2885fa6b3&autoAuth=true&ctid=a99d40af-c145-4e1f-b03c-391762ab3ec9";
+                });
+            </script>
         </div>
         <div class="errorMsg">
             <!-- <h3>Error: You need to enter amount</h3> -->
